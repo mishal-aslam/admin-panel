@@ -5,7 +5,8 @@ import Sidebar from './components/Sidebar'
 import Home from './components/Home'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Customer from './pages/Customer'
-import Rooms from './pages/Rooms'
+import Staff from './pages/Staff'
+import RoomManagement from './pages/Rooms'
 
 function App() {
   const [openSidebarToggle, setOpenSidebarToggle] = useState(false)
@@ -25,7 +26,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/customer" element={<Customer />} />
-            <Route path="/rooms" element={<Rooms />} />
+            <Route path="/rooms" element={<RoomManagement />} />
+            <Route path="/staff" element={<Staff />} />
             {/* Add additional routes as needed */}
           </Routes>
         </main>
