@@ -11,7 +11,7 @@ import {
   BsFillGearFill,
 } from "react-icons/bs";
 
-function Sidebar({ openSidebarToggle, OpenSidebar }) {
+function Sidebar({ openSidebarToggle, OpenSidebar, handleLogout }) {
   return (
     <aside
       id="sidebar"
@@ -39,7 +39,7 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
         </li>
         <li className="sidebar-list-item">
           <Link to="/rooms">
-            <BsFillGrid3X3GapFill className="icon" /> rooms
+            <BsFillGrid3X3GapFill className="icon" /> Rooms
           </Link>
         </li>
         <li className="sidebar-list-item">
@@ -53,6 +53,17 @@ function Sidebar({ openSidebarToggle, OpenSidebar }) {
           </Link>
         </li>
       </ul>
+
+   
+        {/* Logout button */}
+  {handleLogout && (
+    <button
+      className="logout-btn"
+      onClick={handleLogout}
+    >
+      Logout
+    </button>
+  )}
     </aside>
   );
 }

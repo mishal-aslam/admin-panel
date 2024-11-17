@@ -84,6 +84,7 @@ const RoomManagement = () => {
 
   // Handle Delete
   const handleDelete = (id) => {
+    console.log("Deleting room with ID:", id); // Add this line to check the ID
     axios
       .delete(`http://localhost:3001/deleteRoom/${id}`)
       .then(() => {

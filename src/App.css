@@ -243,3 +243,26 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background-color: #555;
 }
+
+
+#sidebar {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Ensure the sidebar takes full height */
+}
+
+.sidebar-list {
+  flex-grow: 1; /* This will push the logout button to the bottom */
+}
+
+.logout-btn {
+  margin-top: auto; /* Push the logout button to the bottom */
+  padding: 10px;
+  background-color: blue;
+  color: white;
+  border: none;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
+
